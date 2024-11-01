@@ -1,8 +1,43 @@
-# Getting Started with Create React App
+# Projeto Wayne Industries
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto é uma aplicação web para gerenciamento de recursos, desenvolvida com React no frontend e Node.js com Express no backend.
 
-## Available Scripts
+## Estrutura do Projeto
+
+Projeto Final/     │
+├── backend/       | # Código fonte do backend
+  ├── models/      | # Modelos do MongoDB
+  ├── routes/      | # Rotas da API
+  ├── middleware/  | # Middleware para autenticação
+  ├── .env         | # Variáveis de ambiente para o backend
+  ├── app.js       | # Arquivo principal do backend
+  ├── package.json | # Dependências do backend
+├── frontend/      | # Código fonte do frontend
+  ├── src/         | # Código fonte do React
+  ├── public/      | # Arquivos públicos
+  └── package.json | # Dependências do frontend
+  └── README.md    | # Este arquivo
+
+## Pré-Requisitos
+
+Antes de começar, você precisará ter as seguintes ferramentas instaladas:
+
+- [Node.js](https://nodejs.org/) (versão 14 ou superior)
+- [MongoDB](https://www.mongodb.com/) (ou usar o [MongoDB Atlas](https://www.mongodb.com/cloud/atlas))
+
+## Configuração do Backend
+
+1. Navegue até a pasta do backend:
+
+   ```bash
+   cd backend
+
+2. Instale as dependências:
+
+  ```bash
+  npm install
+
+3. Crie um arquivo .env
 
 In the project directory, you can run:
 

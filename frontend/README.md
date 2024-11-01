@@ -4,19 +4,7 @@ Este projeto é uma aplicação web para gerenciamento de recursos, desenvolvida
 
 ## Estrutura do Projeto
 
-Projeto Final/     │
-├── backend/       | # Código fonte do backend
-  ├── models/      | # Modelos do MongoDB
-  ├── routes/      | # Rotas da API
-  ├── middleware/  | # Middleware para autenticação
-  ├── .env         | # Variáveis de ambiente para o backend
-  ├── app.js       | # Arquivo principal do backend
-  ├── package.json | # Dependências do backend
-├── frontend/      | # Código fonte do frontend
-  ├── src/         | # Código fonte do React
-  ├── public/      | # Arquivos públicos
-  └── package.json | # Dependências do frontend
-  └── README.md    | # Este arquivo
+Projeto Final/ │ ├── backend/ # Código fonte do backend │ ├── models/ # Modelos do MongoDB │ ├── routes/ # Rotas da API │ ├── middleware/ # Middleware para autenticação │ ├── .env # Variáveis de ambiente para o backend │ ├── app.js # Arquivo principal do backend │ ├── package.json # Dependências do backend │ └── Procfile # Configuração para o Heroku │ └── frontend/ # Código fonte do frontend ├── src/ # Código fonte do React ├── public/ # Arquivos públicos ├── build/ # Versão construída da aplicação ├── package.json # Dependências do frontend └── .env # Variáveis de ambiente para o frontend
 
 ## Pré-Requisitos
 
@@ -31,12 +19,12 @@ Antes de começar, você precisará ter as seguintes ferramentas instaladas:
 
    ```bash
    cd backend
-
+   
 2. Instale as dependências:
 
   ```bash
   npm install
-
+  ```
 3. Crie um arquivo .env
 
 In the project directory, you can run:

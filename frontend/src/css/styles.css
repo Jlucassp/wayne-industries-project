@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Oswald:wght@200..700&family=Oxanium:wght@200..800&display=swap');
+
+.page-container {
+    user-select: none;
+    position: relative;
+    background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/max_632/ba714b165282895.640505f5195fa.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.page-container h2 {
+    font-family: "Oxanium", sans-serif;
+    color: #e2e1dcd5;
+    text-shadow: 
+        1px 1px 0 rgb(0, 0, 0),
+        2px 2px 0 rgba(150, 117, 17, 0.915),
+        3px 3px 5px rgba(91, 95, 33, 0.552)
+}
+
+.background-filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+}
+
+.form {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    width: 300px;
+    margin: auto;
+    text-align: center;
+}
+
+.input {
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    max-width: 280px;
+    width: 100%;
+}
+
+.page-container input {
+    width: 260px;
+}
+
+.page-container select {
+    cursor: pointer ;
+}
+
+.button {
+    background-color: #a09255d5;
+    color: #292929;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+    width: 280px;
+    margin-top: 10px;
+}
+
+.button:hover {
+    background-color: #c5a238; /* Cor ao passar o mouse */
+}

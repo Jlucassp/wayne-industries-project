@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Oswald:wght@200..700&family=Oxanium:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard-container {
+    position: relative;
+    background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/1400/357e02108326377.5fbbac860cf27.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dashboard-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    filter: blur(7px);
+    z-index: 1;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(89, 86, 78, 0.256);
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.dashboard-title {
+    padding-left: 70px;
+    font-size: 2.5em;
+    text-align: center;
+    flex-grow: 1;
+    font-family: "Oxanium", sans-serif;
+    color: #e2e1dcd5;
+    text-shadow: 
+        1px 1px 0 rgb(0, 0, 0),
+        2px 2px 0 rgba(150, 117, 17, 0.915),
+        3px 3px 5px rgba(91, 95, 33, 0.552)
+}
+
+.logout-icon {
+    margin-right: 40px;
+    width: 30px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.logout-icon:hover {
+    transform: scale(1.1);
+}
+
+.dashboard-content {
+    font-family: "Raleway", sans-serif;
+    height: calc(100vh - 110px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.dashboard-content::-webkit-scrollbar {
+    display: none;
+}
+
+.chart-container {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 200px;
+}
+
+.bar-chart {
+    width: 45%;
+    min-width: 300px;
+}
+
+.pie-chart {
+    width: 22%;
+}
+
+.add-resource-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.empty-chart-container {
+    min-height: 42vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.empty-chart {
+    font-size: 24px;
+    color: #f0f0f0d5;
+    text-shadow: 
+        1px 1px 0 rgb(0, 0, 0),
+        2px 2px 0 rgba(0, 0, 0, 0.915),
+        3px 3px 5px rgb(96, 95, 95);
+    font-weight: bold;
+}
+
+.add-resource-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 30px;
+    max-width: 500px;
+    height: 350px;
+    width: 100%;
+    border-radius: 10px;
+    margin: 0 auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(12px);
+}
+
+.add-resource-form h3 {
+    font-size: 24px;
+    color: #242424;
+    font-weight: 600;
+}
+
+.inputs-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-resource-form input {
+    width: 260px;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #858585;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.add-resource-button {
+    margin-bottom: 20px;
+    background-color: rgba(201, 174, 93, 0.9);
+    color: rgba(0, 0, 0, 0.601);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.add-resource-button:hover {
+    background-color: rgba(137, 104, 5, 0.9);
+    color: #fff;
+}
+
+.submit-button {
+    background-color: rgba(201, 174, 93, 0.9);
+    color: rgba(0, 0, 0, 0.601);
+    border: none;
+    padding: 10px 20px;
+    margin-left: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cancel-button {
+    background-color: transparent;
+    color: #3b3a3a;
+    text-decoration: underline;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: rgba(137, 104, 5, 0.9);
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.cancel-button:hover {
+    color: #181818;
+}
+
+.resource-details,
+.edit-resource {
+    padding: 20px;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(12px);
+}
+
+.resource-details h3,
+.edit-resource h3 {
+    font-size: 28px;
+    color: #242424;
+    text-transform: uppercase;
+}
+
+.resource-details p {
+    margin-left: 5px;
+}
+
+.resource-details button {
+    border: none;
+    background-color: transparent;
+    text-decoration: underline;
+    padding: 0;
+    cursor: pointer;
+    color: #3b3a3a;
+}
+
+.resource-details button:hover {
+    color: #181818;
+}
+
+.editBoxes {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.editBoxes input {
+    width: 50%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #858585;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.edit-submit-button {
+    font-size: 16px;
+    background-color: rgba(201, 174, 93, 0.9);
+    color: rgba(0, 0, 0, 0.601);
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.edit-submit-button:hover {
+    background-color: rgba(137, 104, 5, 0.9);
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.resource-table-container {
+    padding: 20px;
+    background-color: rgba(89, 86, 78, 0.256);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.resource-table-container h3 {
+    font-family: "Oxanium", sans-serif;
+    color: #e2e1dcd5;
+    text-shadow: 
+        1px 1px 0 rgb(0, 0, 0),
+        2px 2px 0 rgba(150, 117, 17, 0.915),
+        3px 3px 5px rgba(91, 95, 33, 0.552);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.resource-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+.resource-table th, .resource-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+    background-color: rgba(114, 105, 85, 0.492);
+}
+
+.resource-table th {
+    font-size: 18px;
+    background-color: rgba(201, 174, 93, 0.5);
+    color: #242424;
+}
+
+.resource-table tbody tr:hover {
+    background-color: rgba(201, 174, 93, 0.3); /* Cor de fundo ao passar o mouse */
+}
+
+.action-button {
+    background-color: transparent;
+    border: 1px solid #897645;
+    color: white;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-right: 5px;
+}
+
+.action-button:hover {
+    background-color: #968f56;
+    border: 1px solid #968f56;
+}
+
+.edit-button {
+    background-color: transparent;
+}
+
+.edit-button:hover {
+    background-color: #e0a800;
+    border: 1px solid #e0a800;
+}
+
+.delete-button {
+    background-color: transparent;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+    border: 1px solid #c82333;
+
+}

@@ -1,5 +1,7 @@
 # Projeto Final - Documentação Completa
 
+(PARA ENTENDER A NAVEGAR NA APLICAÇÃO, CHECAR O Navigation.md)
+
 Este projeto é uma aplicação web para gerenciamento de recursos, desenvolvida com React no frontend e Node.js com Express no backend.
 
 ## Estrutura do Projeto

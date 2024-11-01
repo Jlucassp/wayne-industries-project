@@ -1,5 +1,7 @@
 # Projeto Final - Documentação Completa
 
+Este projeto é uma aplicação web para gerenciamento de recursos, desenvolvida com React no frontend e Node.js com Express no backend.
+
 ## Estrutura do Projeto
 
 ```text
@@ -12,22 +14,19 @@ Projeto Final/
 |   ├── .env                # Variáveis de ambiente para o backend
 |   ├── app.js              # Arquivo principal do backend
 |   ├── package.json        # Dependências do backend
-|   └── Procfile            # Configuração para o Heroku
 |
 └── frontend/               # Código fonte do frontend
     ├── src/                # Código fonte do React
     ├── public/             # Arquivos públicos
-    ├── build/              # Versão construída da aplicação
     ├── package.json        # Dependências do frontend
-    └── .env                # Variáveis de ambiente para o frontend
 ```
 
-## Requisitos
+## Pré-Requisitos
 
 Para rodar a aplicação, você precisará dos seguintes softwares instalados:
 
-- Node.js (versão 14 ou superior)
-- MongoDB (local ou uma instância do MongoDB Atlas)
+- [Node.js](https://nodejs.org/) (versão 14 ou superior)
+- [MongoDB](https://www.mongodb.com/) (ou usar o [MongoDB Atlas](https://www.mongodb.com/cloud/atlas))
 - Git
 
 ## Instruções de Configuração
@@ -56,9 +55,9 @@ Para rodar a aplicação, você precisará dos seguintes softwares instalados:
    - Crie um arquivo `.env` na pasta do backend e adicione as variáveis de ambiente:
 
      ```env
-     MONGO_URI=<SUA_URL_DO_MONGODB>
+     MONGO_URI=mongodb+srv://jlucassp:wRJtm2Jl0pf5E1EY@wayneindustries.ltmyu2r.mongodb.net/
      PORT=5000
-     JWT_SECRET=<SUA_SECRET_KEY>
+     JWT_SECRET=1c046a35cdfb797c4fb02a09de28f1686d0c1ea681347c4ea512787b8967bccd
      ```
 
 3. **Configuração do Frontend**
@@ -75,12 +74,6 @@ Para rodar a aplicação, você precisará dos seguintes softwares instalados:
      npm install
      ```
 
-   - Crie um arquivo `.env` na pasta do frontend e adicione as variáveis de ambiente:
-
-     ```env
-     REACT_APP_API_URL=http://localhost:5000
-     ```
-
 ## Executando a Aplicação
 
 1. **Inicie o Backend**
@@ -88,7 +81,7 @@ Para rodar a aplicação, você precisará dos seguintes softwares instalados:
    - Navegue até a pasta do backend e execute o seguinte comando:
 
      ```bash
-     npm start
+     node app.js
      ```
 
    Isso iniciará o servidor backend na porta especificada no arquivo `.env` (geralmente `http://localhost:5000`).
@@ -121,44 +114,3 @@ Para rodar a aplicação, você precisará dos seguintes softwares instalados:
   - axios
   - react-router-dom
   - react-toastify
-
-## Deploy
-
-Este projeto está configurado para deploy no Heroku (backend) e Netlify (frontend), mas você pode adaptar para outros provedores conforme sua necessidade.
-
-### Deploy no Heroku (Backend)
-
-1. **Faça login no Heroku**
-   ```bash
-   heroku login
-   ```
-
-2. **Crie um novo app no Heroku**
-   ```bash
-   heroku create nome-do-seu-app
-   ```
-
-3. **Faça push do código para o Heroku**
-   ```bash
-   git push heroku master
-   ```
-
-4. **Configure as variáveis de ambiente no Heroku**
-   ```bash
-   heroku config:set MONGO_URI=<SUA_URL_DO_MONGODB>
-   heroku config:set JWT_SECRET=<SUA_SECRET_KEY>
-   ```
-
-### Deploy no Netlify (Frontend)
-
-1. **Construa a aplicação React**
-   ```bash
-   npm run build
-   ```
-
-2. **Arraste e solte a pasta `build/` para o painel do Netlify**
-
-## Contato
-
-Caso tenha alguma dúvida ou problema, sinta-se à vontade para entrar em contato.
-

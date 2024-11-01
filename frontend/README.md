@@ -1,93 +1,164 @@
-# Projeto Wayne Industries
-
-Este projeto é uma aplicação web para gerenciamento de recursos, desenvolvida com React no frontend e Node.js com Express no backend.
+# Projeto Final - Documentação Completa
 
 ## Estrutura do Projeto
 
-Projeto Final/ │ ├── backend/ # Código fonte do backend │ ├── models/ # Modelos do MongoDB │ ├── routes/ # Rotas da API │ ├── middleware/ # Middleware para autenticação │ ├── .env # Variáveis de ambiente para o backend │ ├── app.js # Arquivo principal do backend │ ├── package.json # Dependências do backend │ └── Procfile # Configuração para o Heroku │ └── frontend/ # Código fonte do frontend ├── src/ # Código fonte do React ├── public/ # Arquivos públicos ├── build/ # Versão construída da aplicação ├── package.json # Dependências do frontend └── .env # Variáveis de ambiente para o frontend
+```text
+Projeto Final/
+|
+├── backend/                # Código fonte do backend
+|   ├── models/             # Modelos do MongoDB
+|   ├── routes/             # Rotas da API
+|   ├── middleware/         # Middleware para autenticação
+|   ├── .env                # Variáveis de ambiente para o backend
+|   ├── app.js              # Arquivo principal do backend
+|   ├── package.json        # Dependências do backend
+|   └── Procfile            # Configuração para o Heroku
+|
+└── frontend/               # Código fonte do frontend
+    ├── src/                # Código fonte do React
+    ├── public/             # Arquivos públicos
+    ├── build/              # Versão construída da aplicação
+    ├── package.json        # Dependências do frontend
+    └── .env                # Variáveis de ambiente para o frontend
+```
 
-## Pré-Requisitos
+## Requisitos
 
-Antes de começar, você precisará ter as seguintes ferramentas instaladas:
+Para rodar a aplicação, você precisará dos seguintes softwares instalados:
 
-- [Node.js](https://nodejs.org/) (versão 14 ou superior)
-- [MongoDB](https://www.mongodb.com/) (ou usar o [MongoDB Atlas](https://www.mongodb.com/cloud/atlas))
+- Node.js (versão 14 ou superior)
+- MongoDB (local ou uma instância do MongoDB Atlas)
+- Git
 
-## Configuração do Backend
+## Instruções de Configuração
 
-1. Navegue até a pasta do backend:
+1. **Clone o repositório**
 
    ```bash
-   cd backend
-   
-2. Instale as dependências:
+   git clone <URL_DO_REPOSITORIO>
+   cd Projeto\ Final
+   ```
 
-  ```bash
-  npm install
-  ```
-3. Crie um arquivo .env
+2. **Configuração do Backend**
 
-In the project directory, you can run:
+   - Navegue até a pasta do backend:
 
-### `npm start`
+     ```bash
+     cd backend
+     ```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+   - Instale as dependências do backend:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+     ```bash
+     npm install
+     ```
 
-### `npm test`
+   - Crie um arquivo `.env` na pasta do backend e adicione as variáveis de ambiente:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+     ```env
+     MONGO_URI=<SUA_URL_DO_MONGODB>
+     PORT=5000
+     JWT_SECRET=<SUA_SECRET_KEY>
+     ```
 
-### `npm run build`
+3. **Configuração do Frontend**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   - Navegue até a pasta do frontend:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+     ```bash
+     cd ../frontend
+     ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   - Instale as dependências do frontend:
 
-### `npm run eject`
+     ```bash
+     npm install
+     ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   - Crie um arquivo `.env` na pasta do frontend e adicione as variáveis de ambiente:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+     ```env
+     REACT_APP_API_URL=http://localhost:5000
+     ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Executando a Aplicação
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. **Inicie o Backend**
 
-## Learn More
+   - Navegue até a pasta do backend e execute o seguinte comando:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+     ```bash
+     npm start
+     ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   Isso iniciará o servidor backend na porta especificada no arquivo `.env` (geralmente `http://localhost:5000`).
 
-### Code Splitting
+2. **Inicie o Frontend**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   - Em uma nova janela do terminal, navegue até a pasta do frontend e execute o seguinte comando:
 
-### Analyzing the Bundle Size
+     ```bash
+     npm start
+     ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+   Isso iniciará o servidor do frontend (React) na porta `3000` (geralmente `http://localhost:3000`).
 
-### Making a Progressive Web App
+## Observações
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Certifique-se de que o backend esteja rodando antes de iniciar o frontend, pois o frontend faz requisições à API do backend.
+- Altere as variáveis de ambiente conforme necessário, especialmente se você estiver usando um banco de dados remoto.
 
-### Advanced Configuration
+## Dependências
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- **Backend**:
+  - Express
+  - Mongoose
+  - dotenv
+  - jsonwebtoken
 
-### Deployment
+- **Frontend**:
+  - React
+  - axios
+  - react-router-dom
+  - react-toastify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Deploy
 
-### `npm run build` fails to minify
+Este projeto está configurado para deploy no Heroku (backend) e Netlify (frontend), mas você pode adaptar para outros provedores conforme sua necessidade.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Deploy no Heroku (Backend)
+
+1. **Faça login no Heroku**
+   ```bash
+   heroku login
+   ```
+
+2. **Crie um novo app no Heroku**
+   ```bash
+   heroku create nome-do-seu-app
+   ```
+
+3. **Faça push do código para o Heroku**
+   ```bash
+   git push heroku master
+   ```
+
+4. **Configure as variáveis de ambiente no Heroku**
+   ```bash
+   heroku config:set MONGO_URI=<SUA_URL_DO_MONGODB>
+   heroku config:set JWT_SECRET=<SUA_SECRET_KEY>
+   ```
+
+### Deploy no Netlify (Frontend)
+
+1. **Construa a aplicação React**
+   ```bash
+   npm run build
+   ```
+
+2. **Arraste e solte a pasta `build/` para o painel do Netlify**
+
+## Contato
+
+Caso tenha alguma dúvida ou problema, sinta-se à vontade para entrar em contato.
+
